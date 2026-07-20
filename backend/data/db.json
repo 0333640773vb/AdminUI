@@ -1,0 +1,300 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn An",
+      "email": "an.nguyen@company.vn",
+      "role": "TruongPhong",
+      "department": "Kinh doanh"
+    },
+    {
+      "id": 2,
+      "name": "Trần Thị Bình",
+      "email": "binh.tran@company.vn",
+      "role": "NhanVien",
+      "department": "Kinh doanh"
+    },
+    {
+      "id": 3,
+      "name": "Lê Văn Cường",
+      "email": "cuong.le@company.vn",
+      "role": "NhanVien",
+      "department": "Kinh doanh"
+    },
+    {
+      "id": 4,
+      "name": "Phạm Thị Dung",
+      "email": "dung.pham@company.vn",
+      "role": "NhanVien",
+      "department": "Kinh doanh"
+    },
+    {
+      "id": 5,
+      "name": "Hoàng Văn Em",
+      "email": "em.hoang@company.vn",
+      "role": "NhanVien",
+      "department": "Kinh doanh"
+    }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "title": "Họp giao ban tuần 30",
+      "description": "Báo cáo tiến độ công việc tuần 30 và kế hoạch tuần tới",
+      "date": "2026-07-22",
+      "startTime": "08:30",
+      "endTime": "09:30",
+      "room": "Phòng họp A",
+      "organizerId": 1,
+      "status": "approved",
+      "participants": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 2,
+      "title": "Kế hoạch triển khai khách hàng X",
+      "description": "Thảo luận phương án triển khai hợp đồng với khách hàng X",
+      "date": "2026-07-23",
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "room": "Phòng họp B",
+      "organizerId": 2,
+      "status": "pending",
+      "participants": [
+        2,
+        3
+      ],
+      "createdBy": 2
+    },
+    {
+      "id": 3,
+      "title": "Đào tạo sản phẩm Q3",
+      "description": "Đào tạo nội bộ về dòng sản phẩm mới ra mắt quý 3",
+      "date": "2026-07-24",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "room": "Phòng họp A",
+      "organizerId": 4,
+      "status": "pending",
+      "participants": [
+        4,
+        5
+      ],
+      "createdBy": 4
+    },
+    {
+      "id": 4,
+      "title": "Xử lý khiếu nại KH Y",
+      "description": "Xử lý khiếu nại của khách hàng Y về tiến độ giao hàng",
+      "date": "2026-07-15",
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "room": "Phòng họp C",
+      "organizerId": 3,
+      "status": "approved",
+      "participants": [
+        1,
+        3
+      ],
+      "createdBy": 3
+    },
+    {
+      "id": 5,
+      "title": "Đề xuất họp ngoài giờ",
+      "description": "Yêu cầu họp gấp về sự cố hệ thống",
+      "date": "2026-07-21",
+      "startTime": "17:30",
+      "endTime": "18:00",
+      "room": "Phòng họp B",
+      "organizerId": 5,
+      "status": "rejected",
+      "participants": [
+        5
+      ],
+      "createdBy": 5,
+      "rejectReason": "Trùng lịch phòng họp, đề nghị dời sang sáng hôm sau"
+    },
+    {
+      "id": 6,
+      "title": "Review chiến lược bán hàng Q3",
+      "description": "Đánh giá kết quả tháng 6 và điều chỉnh chiến lược tháng 7",
+      "date": "2026-07-25",
+      "startTime": "13:30",
+      "endTime": "15:00",
+      "room": "Phòng họp A",
+      "organizerId": 1,
+      "status": "approved",
+      "participants": [
+        1,
+        2,
+        3
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 7,
+      "title": "Họp định kỳ với Ban Giám đốc",
+      "description": "Báo cáo tình hình kinh doanh phòng Kinh doanh tháng 7",
+      "date": "2026-07-28",
+      "startTime": "09:00",
+      "endTime": "10:30",
+      "room": "Phòng họp D",
+      "organizerId": 1,
+      "status": "pending",
+      "participants": [
+        1
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 8,
+      "title": "Đàm phán hợp đồng đối tác mới",
+      "description": "Trao đổi điều khoản hợp tác với đối tác Z",
+      "date": "2026-07-29",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "room": "Phòng họp B",
+      "organizerId": 2,
+      "status": "pending",
+      "participants": [
+        2,
+        4
+      ],
+      "createdBy": 2
+    },
+    {
+      "id": 9,
+      "title": "Họp giao ban tuần 29",
+      "description": "Báo cáo tiến độ và rà soát KPI tuần 29",
+      "date": "2026-07-14",
+      "startTime": "08:30",
+      "endTime": "09:30",
+      "room": "Phòng họp A",
+      "organizerId": 1,
+      "status": "approved",
+      "participants": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 10,
+      "title": "Sơ kết 6 tháng đầu năm",
+      "description": "Đánh giá tổng thể hoạt động phòng kinh doanh H1/2026",
+      "date": "2026-06-30",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "room": "Phòng họp D",
+      "organizerId": 1,
+      "status": "approved",
+      "participants": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 11,
+      "title": "Tuyển dụng nhân sự mới",
+      "description": "Phỏng vấn ứng viên vị trí Chuyên viên Kinh doanh cấp cao",
+      "date": "2026-06-25",
+      "startTime": "09:00",
+      "endTime": "11:00",
+      "room": "Phòng họp C",
+      "organizerId": 1,
+      "status": "approved",
+      "participants": [
+        1,
+        3
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 12,
+      "title": "Triển khai hệ thống CRM",
+      "description": "Hướng dẫn sử dụng hệ thống CRM mới cho toàn bộ phòng",
+      "date": "2026-06-18",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "room": "Phòng họp A",
+      "organizerId": 4,
+      "status": "approved",
+      "participants": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "createdBy": 4
+    },
+    {
+      "id": 13,
+      "title": "Xin lịch họp đột xuất",
+      "description": "Phản hồi khiếu nại gấp từ khách hàng VIP",
+      "date": "2026-06-10",
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "room": "Phòng họp B",
+      "organizerId": 3,
+      "status": "rejected",
+      "participants": [
+        3,
+        5
+      ],
+      "createdBy": 3,
+      "rejectReason": "Ngoài giờ hành chính, không có phòng trống"
+    },
+    {
+      "id": 14,
+      "title": "Họp giao ban tháng 5",
+      "description": "Đánh giá KPI tháng 5 và lên kế hoạch tháng 6",
+      "date": "2026-05-29",
+      "startTime": "08:30",
+      "endTime": "10:00",
+      "room": "Phòng họp A",
+      "organizerId": 1,
+      "status": "approved",
+      "participants": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 15,
+      "title": "Workshop kỹ năng thuyết trình",
+      "description": "Đào tạo kỹ năng mềm: thuyết trình và đàm phán hiệu quả",
+      "date": "2026-05-20",
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "room": "Phòng họp D",
+      "organizerId": 2,
+      "status": "approved",
+      "participants": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "createdBy": 2
+    }
+  ],
+  "nextMeetingId": 16
+}

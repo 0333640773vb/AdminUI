@@ -1,0 +1,10 @@
+{
+  "description": "Streamline internal meeting management for department heads with an intuitive dashboard, offering scheduling, approval workflows, and comprehensive reporting.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
