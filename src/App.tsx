@@ -82,7 +82,7 @@ const ROOMS = ["Phòng họp A", "Phòng họp B", "Phòng họp C", "Phòng h�
 // Requests go to /api/... and are proxied to http://localhost:3001 by Vite
 // (see the `server.proxy` block in vite.config.ts) — so the backend must be
 // running separately: `cd backend && npm start`.
-const API_BASE = "/api"
+const API_BASE = `${import.meta.env.VITE_API_BASE_URL ?? ""}/api`
 
 class ApiError extends Error {}
 
