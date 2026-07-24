@@ -34,14 +34,6 @@ export default defineConfig(({ mode }) => {
       port: parseInt(process.env.PORT || '8443'),
       strictPort: true,
       watch: { ignored: ['**/.figma/**'] },
-      proxy: {
-        // Forwards API calls to the standalone backend (see /backend).
-        // Start it with: cd backend && npm start (defaults to port 3001).
-        '/api': {
-          target: process.env.BACKEND_URL || 'http://localhost:3001',
-          changeOrigin: true,
-        },
-      },
     },
     preview: {
       host: '0.0.0.0',

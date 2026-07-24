@@ -1,0 +1,78 @@
+{
+  "employees": [
+    { "id": 1, "name": "Nguyễn Văn An", "email": "an.nguyen@company.vn", "role": "TruongPhong", "department": "Kinh doanh" },
+    { "id": 2, "name": "Trần Thị Bình", "email": "binh.tran@company.vn", "role": "NhanVien", "department": "Kinh doanh" },
+    { "id": 3, "name": "Lê Văn Cường", "email": "cuong.le@company.vn", "role": "NhanVien", "department": "Kinh doanh" },
+    { "id": 4, "name": "Phạm Thị Dung", "email": "dung.pham@company.vn", "role": "NhanVien", "department": "Kinh doanh" },
+    { "id": 5, "name": "Hoàng Văn Em", "email": "em.hoang@company.vn", "role": "NhanVien", "department": "Kinh doanh" }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "title": "Họp giao ban tuần",
+      "description": "Báo cáo tiến độ công việc tuần và kế hoạch tuần tới",
+      "date": "2026-07-22",
+      "startTime": "08:30",
+      "endTime": "09:30",
+      "room": "Phòng họp A",
+      "organizerId": 1,
+      "status": "approved",
+      "participants": [1, 2, 3, 4, 5],
+      "createdBy": 1
+    },
+    {
+      "id": 2,
+      "title": "Trao đổi kế hoạch triển khai khách hàng X",
+      "description": "Thảo luận phương án triển khai hợp đồng với khách hàng X",
+      "date": "2026-07-23",
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "room": "Phòng họp B",
+      "organizerId": 2,
+      "status": "pending",
+      "participants": [2, 3],
+      "createdBy": 2
+    },
+    {
+      "id": 3,
+      "title": "Đào tạo sản phẩm mới",
+      "description": "Đào tạo nội bộ về dòng sản phẩm mới ra mắt quý 3",
+      "date": "2026-07-24",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "room": "Phòng họp A",
+      "organizerId": 4,
+      "status": "pending",
+      "participants": [4, 5],
+      "createdBy": 4
+    },
+    {
+      "id": 4,
+      "title": "Họp xử lý khiếu nại khách hàng",
+      "description": "Xử lý khiếu nại của khách hàng Y về tiến độ giao hàng",
+      "date": "2026-07-15",
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "room": "Phòng họp C",
+      "organizerId": 3,
+      "status": "approved",
+      "participants": [1, 3],
+      "createdBy": 3
+    },
+    {
+      "id": 5,
+      "title": "Đề xuất họp ngoài giờ",
+      "description": "Yêu cầu họp gấp về sự cố hệ thống",
+      "date": "2026-07-21",
+      "startTime": "17:30",
+      "endTime": "18:00",
+      "room": "Phòng họp B",
+      "organizerId": 5,
+      "status": "rejected",
+      "participants": [5],
+      "createdBy": 5,
+      "rejectReason": "Trùng lịch phòng họp, đề nghị dời sang sáng hôm sau"
+    }
+  ],
+  "nextMeetingId": 6
+}

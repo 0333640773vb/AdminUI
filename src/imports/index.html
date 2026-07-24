@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Module Trưởng phòng - Hệ thống Quản lý Cuộc họp</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="login-screen" class="login-screen">
+  <div class="login-box">
+    <h1>Hệ thống Quản lý Cuộc họp</h1>
+    <p class="subtitle">Đăng nhập - Vai trò Trưởng phòng</p>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" id="login-email" placeholder="an.nguyen@company.vn" value="an.nguyen@company.vn" />
+    </div>
+    <div class="field">
+      <label>Mật khẩu</label>
+      <input type="password" id="login-password" placeholder="••••••" value="123456" />
+    </div>
+    <button id="login-btn">Đăng nhập</button>
+    <p class="hint">Tài khoản demo: an.nguyen@company.vn / 123456</p>
+    <p id="login-error" class="error"></p>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+  <header class="topbar">
+    <div class="brand">📅 Quản lý Cuộc họp <span class="badge">Trưởng phòng</span></div>
+    <div class="user-info">
+      <span id="user-name"></span>
+      <button id="logout-btn">Đăng xuất</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="dashboard">Tổng quan</button>
+    <button class="tab-btn" data-tab="calendar">Lịch họp phòng ban</button>
+    <button class="tab-btn" data-tab="requests">Duyệt yêu cầu <span id="pending-count" class="count"></span></button>
+    <button class="tab-btn" data-tab="create">Tạo cuộc họp</button>
+    <button class="tab-btn" data-tab="report">Báo cáo thống kê</button>
+  </nav>
+
+  <main class="content">
+
+    <section id="tab-dashboard" class="tab-panel active">
+      <h2>Tổng quan</h2>
+      <div class="cards" id="dashboard-cards"></div>
+      <h3>Cuộc họp sắp diễn ra</h3>
+      <table class="data-table" id="upcoming-table">
+        <thead><tr><th>Ngày</th><th>Giờ</th><th>Tiêu đề</th><th>Phòng</th><th>Người tổ chức</th><th>Trạng thái</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="tab-calendar" class="tab-panel">
+      <h2>Lịch họp phòng ban</h2>
+      <div class="filter-bar">
+        <label>Trạng thái:
+          <select id="filter-status">
+            <option value="">Tất cả</option>
+            <option value="approved">Đã duyệt</option>
+            <option value="pending">Chờ duyệt</option>
+            <option value="rejected">Từ chối</option>
+          </select>
+        </label>
+      </div>
+      <table class="data-table" id="calendar-table">
+        <thead><tr><th>Ngày</th><th>Giờ</th><th>Tiêu đề</th><th>Phòng</th><th>Người tổ chức</th><th>Người tham gia</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="tab-requests" class="tab-panel">
+      <h2>Duyệt yêu cầu đặt lịch họp</h2>
+      <p class="desc">Danh sách các cuộc họp do nhân viên đề xuất, đang chờ Trưởng phòng phê duyệt.</p>
+      <table class="data-table" id="requests-table">
+        <thead><tr><th>Ngày</th><th>Giờ</th><th>Tiêu đề</th><th>Mô tả</th><th>Người đề xuất</th><th>Phòng</th><th>Thao tác</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="tab-create" class="tab-panel">
+      <h2>Tạo cuộc họp mới</h2>
+      <form id="create-form" class="form-grid">
+        <div class="field"><label>Tiêu đề *</label><input type="text" id="f-title" required /></div>
+        <div class="field"><label>Phòng họp *</label>
+          <select id="f-room" required>
+            <option>Phòng họp A</option>
+            <option>Phòng họp B</option>
+            <option>Phòng họp C</option>
+          </select>
+        </div>
+        <div class="field"><label>Ngày *</label><input type="date" id="f-date" required /></div>
+        <div class="field"><label>Giờ bắt đầu *</label><input type="time" id="f-start" required /></div>
+        <div class="field"><label>Giờ kết thúc *</label><input type="time" id="f-end" required /></div>
+        <div class="field full"><label>Mô tả</label><textarea id="f-desc" rows="3"></textarea></div>
+        <div class="field full">
+          <label>Người tham gia</label>
+          <div id="f-participants" class="checkbox-list"></div>
+        </div>
+        <button type="submit" class="primary">Tạo cuộc họp</button>
+      </form>
+      <p id="create-success" class="success"></p>
+    </section>
+
+    <section id="tab-report" class="tab-panel">
+      <h2>Báo cáo thống kê cuộc họp</h2>
+      <div class="report-grid">
+        <div class="report-box">
+          <h3>Theo trạng thái</h3>
+          <div id="report-status"></div>
+        </div>
+        <div class="report-box">
+          <h3>Theo phòng họp</h3>
+          <div id="report-room"></div>
+        </div>
+        <div class="report-box full">
+          <h3>Theo tháng</h3>
+          <div id="report-month"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
